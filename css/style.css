@@ -167,7 +167,7 @@ img { max-width: 100%; }
 
 .nav-logo {
   /* Fluid: ~68px on phones → ~44px on desktops, auto-scales in between */
-  height: clamp(44px, calc(80px - 3vw), 80px);
+  height: clamp(52px, calc(80px - 3vw), 80px);
   width: auto;
   display: block;
   object-fit: contain;

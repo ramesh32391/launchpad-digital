@@ -8,6 +8,12 @@ const nav = document.getElementById('mainNav');
 window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 60);
   highlightNavLink();
+
+  // Close mobile menu on scroll
+  const mobileMenu = document.getElementById('navMenu');
+  if (mobileMenu && mobileMenu.classList.contains('show')) {
+    bootstrap.Collapse.getInstance(mobileMenu)?.hide();
+  }
 }, { passive: true });
 
 function highlightNavLink() {

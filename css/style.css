@@ -1255,6 +1255,37 @@ img { max-width: 100%; }
    RESPONSIVE
 ============================================= */
 @media (max-width: 991px) {
+  /* Mobile nav menu — solid white background, dark text */
+  #mainNav .navbar-collapse {
+    background: #fff;
+    border-top: 1px solid rgba(229,231,235,0.9);
+    margin: 0 -16px;
+    padding: 12px 20px 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  }
+  #mainNav .navbar-collapse .nav-link {
+    color: #1e293b !important;
+    padding: 10px 12px !important;
+    border-radius: 8px;
+  }
+  #mainNav .navbar-collapse .nav-link:hover {
+    color: var(--primary) !important;
+    background: rgba(79,70,229,0.07);
+  }
+  #mainNav .navbar-collapse .nav-contact-link {
+    color: var(--primary);
+    display: inline-block;
+    margin-top: 8px;
+  }
+  #mainNav .navbar-collapse .d-flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(229,231,235,0.7);
+    margin-top: 8px;
+  }
+
   .hero-section { padding-bottom: 60px; }
   .fb-seo, .fb-speed { display: none; }
   .cta-inner { flex-direction: column; }

@@ -307,8 +307,9 @@ img { max-width: 100%; }
 }
 .nav-cta-btn:hover::after { animation: none; opacity: 0; }
 
-.navbar-toggler { border: 1px solid var(--card-border); border-radius: 8px; padding: 6px 10px; }
+.navbar-toggler { border: 1px solid var(--card-border); border-radius: 8px; padding: 6px 10px; color: #1e293b; }
 .navbar-toggler:focus { box-shadow: none; }
+.navbar-toggler .bi { color: #1e293b; }
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%234f46e5' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }

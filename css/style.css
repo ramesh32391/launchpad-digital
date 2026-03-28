@@ -166,12 +166,12 @@ img { max-width: 100%; }
 .brand-red { color: var(--primary); }
 
 .nav-logo {
-  height: 44px;
+  height: 14px;
   width: auto;
   display: block;
 }
 .footer-logo {
-  height: 56px;
+  height: 36px;
   width: auto;
   display: block;
 }

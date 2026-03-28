@@ -307,7 +307,7 @@ img { max-width: 100%; }
 }
 .nav-cta-btn:hover::after { animation: none; opacity: 0; }
 
-.navbar-toggler { border: 1px solid var(--card-border); border-radius: 8px; padding: 6px 10px; color: #1e293b; }
+.navbar-toggler { border: 1.5px solid #1e293b; border-radius: 8px; padding: 6px 10px; color: #1e293b; }
 .navbar-toggler:focus { box-shadow: none; }
 .navbar-toggler .bi { color: #1e293b; }
 .navbar-toggler-icon {

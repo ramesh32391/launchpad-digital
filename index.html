@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="LaunchPad Digital — We build high-converting websites that bring more customers and dominate search rankings for small businesses." />
-  <title>LaunchPad Digital — Grow Your Business Online</title>
+  <meta name="description" content="WebReach — We build high-converting websites that bring more customers and dominate search rankings for small businesses." />
+  <title>WebReach — Grow Your Business Online</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@300;400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -19,8 +19,7 @@
   <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
     <div class="container-xl">
       <a class="navbar-brand" href="#hero">
-        <span class="brand-dot"></span>
-        LaunchPad<span class="brand-red">Digital</span>
+        <img src="images/logo.png" alt="WebReach" class="nav-logo">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
         <i class="bi bi-list text-white fs-4"></i>
@@ -34,8 +33,8 @@
           <li class="nav-item"><a class="nav-link" href="#testimonials">Reviews</a></li>
         </ul>
         <div class="d-flex align-items-center gap-3">
-          <a href="#contact" class="nav-link text-muted-light">Contact</a>
-          <a href="#pricing" class="btn btn-red">Get Started</a>
+          <a href="#contact" class="nav-contact-link">Contact</a>
+          <a href="#pricing" class="btn nav-cta-btn">Get Started <i class="bi bi-arrow-right nav-cta-arrow"></i></a>
         </div>
       </div>
     </div>
@@ -58,7 +57,7 @@
             <span class="hero-title-red">better website</span>
           </h1>
           <p class="hero-subtitle">
-            LaunchPad Digital has been building high-converting websites and driving real customer growth since day one — helping small businesses compete and win online.
+            WebReach has been building high-converting websites and driving real customer growth since day one — helping small businesses compete and win online.
           </p>
           <div class="hero-actions">
             <a href="#pricing" class="btn btn-red btn-lg">See Pricing</a>
@@ -74,40 +73,39 @@
         </div>
         <div class="col-lg-6 hero-visual fade-in-right d-none d-lg-flex">
           <div class="hero-card-wrap">
-            <!-- Main browser card -->
-            <div class="browser-card">
+            <div class="hcw-glow"></div>
+            <!-- Stack card — back -->
+            <div class="browser-card hs-back">
               <div class="bc-bar">
                 <span class="bc-dot"></span><span class="bc-dot"></span><span class="bc-dot"></span>
-                <div class="bc-url">yoursite.com</div>
-                <i class="bi bi-shield-lock-fill bc-ssl"></i>
+                <div class="bc-url"><i class="bi bi-lock-fill bc-ssl"></i> shopstore.com</div>
               </div>
-              <div class="bc-body">
-                <div class="bc-hero-strip">
-                  <div class="bc-hero-left">
-                    <div class="bc-line w-70 mb-1"></div>
-                    <div class="bc-line w-50 mb-2 bc-line-sm"></div>
-                    <div class="bc-cta-mini"></div>
-                  </div>
-                  <div class="bc-hero-right">
-                    <div class="bc-screen-photo">
-                      <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=240&h=160&fit=crop&q=80" alt="Website analytics dashboard">
-                    </div>
-                  </div>
-                </div>
-                <div class="bc-cards-row">
-                  <div class="bc-mini-card"><div class="bc-mini-icon bmi-red"><i class="bi bi-people-fill"></i></div><div class="bc-mini-val">+180</div><div class="bc-mini-lbl">leads/mo</div></div>
-                  <div class="bc-mini-card"><div class="bc-mini-icon bmi-green"><i class="bi bi-graph-up"></i></div><div class="bc-mini-val">+247%</div><div class="bc-mini-lbl">traffic</div></div>
-                  <div class="bc-mini-card"><div class="bc-mini-icon bmi-yellow"><i class="bi bi-star-fill"></i></div><div class="bc-mini-val">4.9★</div><div class="bc-mini-lbl">rating</div></div>
-                </div>
-                <div class="bc-chart-row">
-                  <div class="bc-bar-wrap"></div>
-                  <div class="bc-bar-wrap"></div>
-                  <div class="bc-bar-wrap"></div>
-                  <div class="bc-bar-wrap"></div>
-                  <div class="bc-bar-wrap"></div>
-                  <div class="bc-bar-wrap active"></div>
-                  <div class="bc-bar-wrap"></div>
-                  <div class="bc-bar-wrap active"></div>
+              <div class="bc-photo-wrap">
+                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=720&h=420&fit=crop&q=80" alt="E-commerce website">
+              </div>
+            </div>
+            <!-- Stack card — middle -->
+            <div class="browser-card hs-mid">
+              <div class="bc-bar">
+                <span class="bc-dot"></span><span class="bc-dot"></span><span class="bc-dot"></span>
+                <div class="bc-url"><i class="bi bi-lock-fill bc-ssl"></i> mybusiness.com</div>
+              </div>
+              <div class="bc-photo-wrap">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=720&h=420&fit=crop&q=80" alt="Business analytics dashboard">
+              </div>
+            </div>
+            <!-- Main browser card — front -->
+            <div class="browser-card hs-front">
+              <div class="bc-bar">
+                <span class="bc-dot"></span><span class="bc-dot"></span><span class="bc-dot"></span>
+                <div class="bc-url"><i class="bi bi-lock-fill bc-ssl"></i> yoursite.com</div>
+              </div>
+              <div class="bc-photo-wrap">
+                <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=720&h=420&fit=crop&q=85" alt="Professional website design on screen">
+                <div class="bc-photo-stats">
+                  <div class="bps-item"><i class="bi bi-people-fill"></i> +180 leads/mo</div>
+                  <div class="bps-item"><i class="bi bi-graph-up-arrow"></i> +247% traffic</div>
+                  <div class="bps-item"><i class="bi bi-star-fill"></i> 4.9 rating</div>
                 </div>
               </div>
             </div>
@@ -364,6 +362,7 @@
             <button type="button" class="pf-btn" data-filter="local">Local</button>
             <button type="button" class="pf-btn" data-filter="ecommerce">E-Commerce</button>
             <button type="button" class="pf-btn" data-filter="professional">Professional</button>
+            <button type="button" class="pf-btn" data-filter="hospitality">Hospitality</button>
           </div>
         </div>
       </div>
@@ -544,6 +543,93 @@
           </div>
         </div>
 
+        <!-- The Golden Fork Restaurant -->
+        <div class="col-md-6 col-lg-4 fade-up portfolio-item" data-category="hospitality">
+          <div class="portfolio-card">
+            <div class="portfolio-thumb">
+              <div class="pf-browser">
+                <div class="pf-bar">
+                  <div class="pf-dots"><span></span><span></span><span></span></div>
+                  <div class="pf-url">goldenforkrestaurant.com</div>
+                </div>
+                <div class="pf-photo">
+                  <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=340&fit=crop&q=80" alt="The Golden Fork Restaurant" loading="lazy">
+                  <div class="pf-name-tag"><i class="bi bi-egg-fried"></i> The Golden Fork</div>
+                </div>
+              </div>
+              <div class="portfolio-overlay">
+                <div class="ov-stats">
+                  <div class="ov-stat"><i class="bi bi-calendar-check"></i> +270% reservations</div>
+                  <div class="ov-stat"><i class="bi bi-trophy"></i> #1 Google Local</div>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <span class="p-tag">Hospitality</span>
+              <h5>The Golden Fork Restaurant</h5>
+              <p>Fully booked every weekend within 8 weeks of launch.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Prime Spirits & Wine -->
+        <div class="col-md-6 col-lg-4 fade-up portfolio-item" data-category="hospitality">
+          <div class="portfolio-card">
+            <div class="portfolio-thumb">
+              <div class="pf-browser">
+                <div class="pf-bar">
+                  <div class="pf-dots"><span></span><span></span><span></span></div>
+                  <div class="pf-url">primespirits.com</div>
+                </div>
+                <div class="pf-photo">
+                  <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=600&h=340&fit=crop&q=80" alt="Prime Spirits and Wine" loading="lazy">
+                  <div class="pf-name-tag"><i class="bi bi-cup-straw"></i> Prime Spirits &amp; Wine</div>
+                </div>
+              </div>
+              <div class="portfolio-overlay">
+                <div class="ov-stats">
+                  <div class="ov-stat"><i class="bi bi-cart-check"></i> +190% online orders</div>
+                  <div class="ov-stat"><i class="bi bi-graph-up"></i> +450% traffic</div>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <span class="p-tag">Hospitality</span>
+              <h5>Prime Spirits &amp; Wine</h5>
+              <p>Online orders tripled in the first month with a click-and-collect system.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Brewed Awakening Cafe -->
+        <div class="col-md-6 col-lg-4 fade-up portfolio-item" data-category="hospitality">
+          <div class="portfolio-card">
+            <div class="portfolio-thumb">
+              <div class="pf-browser">
+                <div class="pf-bar">
+                  <div class="pf-dots"><span></span><span></span><span></span></div>
+                  <div class="pf-url">brewedawakening.com</div>
+                </div>
+                <div class="pf-photo">
+                  <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&h=340&fit=crop&q=80" alt="Brewed Awakening Cafe" loading="lazy">
+                  <div class="pf-name-tag"><i class="bi bi-cup-hot-fill"></i> Brewed Awakening</div>
+                </div>
+              </div>
+              <div class="portfolio-overlay">
+                <div class="ov-stats">
+                  <div class="ov-stat"><i class="bi bi-people-fill"></i> +180 new customers/mo</div>
+                  <div class="ov-stat"><i class="bi bi-star-fill"></i> 4.8 Google rating</div>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <span class="p-tag">Hospitality</span>
+              <h5>Brewed Awakening Café</h5>
+              <p>Online menu and loyalty page grew foot traffic by 310% in 3 months.</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -553,7 +639,7 @@
   ══════════════════════════════════════════ -->
   <section class="section-pad why-section" id="how-we-work">
     <div class="container-xl">
-      <div class="section-label fade-up">Why LaunchPad Digital</div>
+      <div class="section-label fade-up">Why WebReach</div>
       <h2 class="section-title fade-up mb-5">Three reasons businesses<br /><span class="red">choose us and stay</span></h2>
       <div class="row g-4">
         <div class="col-lg-4 fade-up">
@@ -835,7 +921,7 @@
         <div class="col-md-6 col-lg-4 fade-up rev-d1">
           <div class="review-card review-card-accent">
             <div class="review-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-            <p class="review-text">"We were getting 10 leads a month before. After LaunchPad rebuilt our site, we're at 140+ leads every month. The plan pays for itself 100x over."</p>
+            <p class="review-text">"We were getting 10 leads a month before. After WebReach rebuilt our site, we're at 140+ leads every month. The plan pays for itself 100x over."</p>
             <div class="review-author">
               <img src="https://randomuser.me/api/portraits/men/32.jpg" class="review-avatar-photo" alt="Marcus Rodriguez">
               <div><div class="review-name">Marcus Rodriguez</div><div class="review-role">Harbor Law Group</div></div>
@@ -865,7 +951,7 @@
         <div class="col-md-6 col-lg-4 fade-up rev-d2">
           <div class="review-card">
             <div class="review-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-            <p class="review-text">"From zero online presence to 85 property inquiries a month. My competitors spend thousands on ads and still rank below me. LaunchPad changed everything."</p>
+            <p class="review-text">"From zero online presence to 85 property inquiries a month. My competitors spend thousands on ads and still rank below me. WebReach changed everything."</p>
             <div class="review-author">
               <img src="https://randomuser.me/api/portraits/men/51.jpg" class="review-avatar-photo" alt="Thomas Chen">
               <div><div class="review-name">Thomas Chen</div><div class="review-role">Luxe Realty Group</div></div>
@@ -879,6 +965,26 @@
             <div class="review-author">
               <img src="https://randomuser.me/api/portraits/men/22.jpg" class="review-avatar-photo" alt="Jake Morrison">
               <div><div class="review-name">Jake Morrison</div><div class="review-role">FitCore Gym</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 fade-up">
+          <div class="review-card">
+            <div class="review-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+            <p class="review-text">"We were barely getting walk-ins from people who found us online. After WebReach built our site, we're fully booked on weekends and our Google reviews jumped from 12 to 94."</p>
+            <div class="review-author">
+              <img src="https://randomuser.me/api/portraits/men/43.jpg" class="review-avatar-photo" alt="Daniel Reyes">
+              <div><div class="review-name">Daniel Reyes</div><div class="review-role">The Golden Fork Restaurant</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 fade-up rev-d1">
+          <div class="review-card review-card-accent">
+            <div class="review-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+            <p class="review-text">"I thought a website for a liquor store wasn't worth it. Now we get online orders daily, rank above the big chains on Google, and our holiday sales were up 190% year on year."</p>
+            <div class="review-author">
+              <img src="https://randomuser.me/api/portraits/women/55.jpg" class="review-avatar-photo" alt="Angela Morris">
+              <div><div class="review-name">Angela Morris</div><div class="review-role">Prime Spirits &amp; Wine</div></div>
             </div>
           </div>
         </div>
@@ -912,10 +1018,9 @@
       <div class="row g-5 footer-top">
         <div class="col-lg-4">
           <a class="footer-brand" href="#hero">
-            <span class="brand-dot"></span>
-            LaunchPad<span class="brand-red">Digital</span>
+            <img src="images/logo.png" alt="WebReach" class="footer-logo">
           </a>
-          <p class="footer-tagline">LaunchPad Digital — a committed partner for small businesses building their online presence and growing their customer base.</p>
+          <p class="footer-tagline">WebReach — a committed partner for small businesses building their online presence and growing their customer base.</p>
           <div class="footer-socials">
             <a href="#" class="fsoc"><i class="bi bi-facebook"></i></a>
             <a href="#" class="fsoc"><i class="bi bi-instagram"></i></a>
@@ -962,7 +1067,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2025 LaunchPad Digital. All rights reserved.</span>
+        <span>&copy; 2025 WebReach. All rights reserved.</span>
         <div class="footer-bottom-links">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Service</a>

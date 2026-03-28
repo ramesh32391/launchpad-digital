@@ -283,6 +283,106 @@ if (logoItems.length) {
 }
 
 /* ═══════════════════════════════════════════
+   HERO CARD STACK — smooth lerp tilt + shine
+═══════════════════════════════════════════ */
+(function () {
+  const wrap  = document.querySelector('.hero-card-wrap');
+  if (!wrap) return;
+
+  const front = wrap.querySelector('.hs-front');
+  const mid   = wrap.querySelector('.hs-mid');
+  const back  = wrap.querySelector('.hs-back');
+  const glow  = wrap.querySelector('.hcw-glow');
+
+  // Lerp state: target and current, normalised -1 → +1
+  let tX = 0, tY = 0;
+  let cX = 0, cY = 0;
+  let hovering = false;
+  let rafId    = null;
+
+  function lerp(a, b, t) { return a + (b - a) * t; }
+
+  function tick() {
+    // Lerp toward target (or toward 0 when not hovering)
+    const speed = 0.075;
+    cX = lerp(cX, hovering ? tX : 0, speed);
+    cY = lerp(cY, hovering ? tY : 0, speed);
+
+    const rX  = -cY * 13;
+    const rY  =  cX * 13;
+    const p   = 'perspective(900px)';
+
+    // Front: full tilt, floats up, dynamic directional shadow
+    const sX  = (-rY * 2).toFixed(1);
+    const sY  = (rX  * 2 + 24).toFixed(1);
+    front.style.transform = `${p} rotateX(${rX.toFixed(2)}deg) rotateY(${rY.toFixed(2)}deg) translateZ(30px) translateY(-6px)`;
+    front.style.boxShadow = `${sX}px ${sY}px 55px rgba(79,70,229,0.42), 0 8px 24px rgba(0,0,0,0.12)`;
+
+    // Mid: 55% tilt, stays in its rotated slot
+    mid.style.transform = `${p} rotateX(${(rX*0.55).toFixed(2)}deg) rotateY(${(rY*0.55).toFixed(2)}deg) rotate(-3deg) translateX(-7px) translateZ(10px)`;
+
+    // Back: 25% tilt, stays deepest
+    back.style.transform = `${p} rotateX(${(rX*0.25).toFixed(2)}deg) rotateY(${(rY*0.25).toFixed(2)}deg) rotate(-6deg) translateX(-14px) translateZ(-10px)`;
+
+    // Holographic shine tracks cursor on front card
+    const shX = ((cX * 0.5 + 0.5) * 100).toFixed(1);
+    const shY = ((cY * 0.5 + 0.5) * 100).toFixed(1);
+    front.style.setProperty('--shine-x', `${shX}%`);
+    front.style.setProperty('--shine-y', `${shY}%`);
+
+    // Move ambient glow
+    if (glow) {
+      glow.style.left = `${((cX * 0.5 + 0.5) * 100).toFixed(1)}%`;
+      glow.style.top  = `${((cY * 0.5 + 0.5) * 100).toFixed(1)}%`;
+    }
+
+    // Stop loop only when fully settled back at rest
+    const settled = !hovering && Math.abs(cX) < 0.002 && Math.abs(cY) < 0.002;
+    if (settled) {
+      front.style.transform = '';
+      front.style.boxShadow = '';
+      mid.style.transform   = 'rotate(-3deg) translateX(-7px) scale(0.985)';
+      back.style.transform  = 'rotate(-6deg) translateX(-14px) scale(0.97)';
+      front.style.removeProperty('--shine-x');
+      front.style.removeProperty('--shine-y');
+      rafId = null;
+      return;
+    }
+    rafId = requestAnimationFrame(tick);
+  }
+
+  wrap.addEventListener('mouseenter', () => {
+    hovering = true;
+    if (!rafId) rafId = requestAnimationFrame(tick);
+  });
+
+  wrap.addEventListener('mousemove', e => {
+    const r = wrap.getBoundingClientRect();
+    tX = (e.clientX - r.left) / r.width  * 2 - 1;
+    tY = (e.clientY - r.top)  / r.height * 2 - 1;
+  });
+
+  wrap.addEventListener('mouseleave', () => {
+    hovering = false;
+    // RAF loop keeps running, lerps smoothly back to 0
+  });
+
+  // Hovering directly on a back/mid card pops it forward
+  [mid, back].forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      card.style.zIndex  = '5';
+      card.style.opacity = '1';
+      card.style.filter  = 'none';
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.zIndex  = '';
+      card.style.opacity = '';
+      card.style.filter  = '';
+    });
+  });
+}());
+
+/* ═══════════════════════════════════════════
    RED BAR HOVER LIFT on how-cards
 ═══════════════════════════════════════════ */
 document.querySelectorAll('.how-card, .why-card, .review-card, .pcn-card, .portfolio-card').forEach(card => {

@@ -166,14 +166,18 @@ img { max-width: 100%; }
 .brand-red { color: var(--primary); }
 
 .nav-logo {
-  height: 48px;
+  /* Fluid: ~68px on phones → ~44px on desktops, auto-scales in between */
+  height: clamp(44px, calc(80px - 3vw), 80px);
   width: auto;
   display: block;
+  object-fit: contain;
 }
 .footer-logo {
-  height: 86px;
+  /* Fluid: ~85px on phones → ~56px on desktops */
+  height: clamp(56px, calc(100px - 4vw), 100px);
   width: auto;
   display: block;
+  object-fit: contain;
 }
 
 .nav-link {
@@ -1251,7 +1255,6 @@ img { max-width: 100%; }
    RESPONSIVE
 ============================================= */
 @media (max-width: 991px) {
-  .nav-logo { height: 108px; }
   .hero-section { padding-bottom: 60px; }
   .fb-seo, .fb-speed { display: none; }
   .cta-inner { flex-direction: column; }

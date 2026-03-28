@@ -166,7 +166,7 @@ img { max-width: 100%; }
 .brand-red { color: var(--primary); }
 
 .nav-logo {
-  height: 108px;
+  height: 48px;
   width: auto;
   display: block;
 }
@@ -1251,6 +1251,7 @@ img { max-width: 100%; }
    RESPONSIVE
 ============================================= */
 @media (max-width: 991px) {
+  .nav-logo { height: 108px; }
   .hero-section { padding-bottom: 60px; }
   .fb-seo, .fb-speed { display: none; }
   .cta-inner { flex-direction: column; }

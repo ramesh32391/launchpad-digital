@@ -1,6 +1,36 @@
 'use strict';
 
 /* ═══════════════════════════════════════════
+   PROMO BAR — slide down on load
+═══════════════════════════════════════════ */
+(function () {
+  const bar   = document.getElementById('promoBar');
+  const close = document.getElementById('promoClose');
+  const nav   = document.getElementById('mainNav');
+  if (!bar) return;
+
+  function applyOffset() {
+    nav.style.top = bar.offsetHeight + 'px';
+  }
+  function removeOffset() {
+    nav.style.top = '';
+  }
+
+  if (!sessionStorage.getItem('promoClosed')) {
+    setTimeout(() => {
+      bar.classList.add('visible');
+      applyOffset();
+    }, 800);
+  }
+
+  close.addEventListener('click', () => {
+    bar.classList.remove('visible');
+    removeOffset();
+    sessionStorage.setItem('promoClosed', '1');
+  });
+}());
+
+/* ═══════════════════════════════════════════
    NAVBAR — scroll shrink + active link
 ═══════════════════════════════════════════ */
 const nav = document.getElementById('mainNav');

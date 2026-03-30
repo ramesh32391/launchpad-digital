@@ -9,7 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@300;400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
-  <link href="css/style.css?v=5" rel="stylesheet" />
+  <link href="css/style.css?v=6" rel="stylesheet" />
 </head>
 <body>
 
@@ -33,7 +33,7 @@
           <li class="nav-item"><a class="nav-link" href="#testimonials">Reviews</a></li>
         </ul>
         <div class="d-flex align-items-center gap-3">
-          <a href="#contact" class="nav-contact-link">Contact</a>
+          <a href="#contact-form" class="nav-contact-link">Contact</a>
           <a href="#pricing" class="btn nav-cta-btn">Get Started <i class="bi bi-arrow-right nav-cta-arrow"></i></a>
         </div>
       </div>
@@ -1011,6 +1011,75 @@
   </section>
 
   <!-- ══════════════════════════════════════════
+       CONTACT FORM
+  ══════════════════════════════════════════ -->
+  <section class="section-pad contact-section" id="contact-form">
+    <div class="container-xl">
+      <div class="text-center mb-5">
+        <div class="section-label fade-up">Contact Us</div>
+        <h2 class="section-title fade-up">Tell us about your project</h2>
+        <p class="section-sub fade-up">Fill in the form and we'll get back to you within 24 hours.</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-7 col-md-10 fade-up">
+          <div class="contact-card">
+
+            <form name="contact" method="POST" data-netlify="true" id="contactForm">
+              <input type="hidden" name="form-name" value="contact">
+
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label class="cf-label" for="cf-name">Full Name <span class="cf-req">*</span></label>
+                  <input id="cf-name" type="text" name="name" class="cf-input" placeholder="John Smith" required>
+                </div>
+                <div class="col-sm-6">
+                  <label class="cf-label" for="cf-email">Email Address <span class="cf-req">*</span></label>
+                  <input id="cf-email" type="email" name="email" class="cf-input" placeholder="john@example.com" required>
+                </div>
+                <div class="col-sm-6">
+                  <label class="cf-label" for="cf-phone">Phone Number</label>
+                  <input id="cf-phone" type="tel" name="phone" class="cf-input" placeholder="+1 (555) 000-0000">
+                </div>
+                <div class="col-sm-6">
+                  <label class="cf-label" for="cf-type">Type of Website</label>
+                  <select id="cf-type" name="website_type" class="cf-input cf-select">
+                    <option value="">Select one…</option>
+                    <option>Local Business</option>
+                    <option>Restaurant / Café</option>
+                    <option>E-Commerce / Shop</option>
+                    <option>Personal / Portfolio</option>
+                    <option>Real Estate</option>
+                    <option>Healthcare / Medical</option>
+                    <option>Liquor Store</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="cf-label" for="cf-message">Tell us about your needs <span class="cf-req">*</span></label>
+                  <textarea id="cf-message" name="message" class="cf-input cf-textarea" placeholder="Describe your goals, current problems, or what kind of website you need…" rows="5" required></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-red btn-lg cf-submit">
+                    Send Message <i class="bi bi-send-fill"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+
+            <!-- Success state (shown after submit) -->
+            <div class="cf-success" id="cfSuccess">
+              <div class="cfs-icon"><i class="bi bi-check-circle-fill"></i></div>
+              <h4>Message sent!</h4>
+              <p>Thanks for reaching out. We'll reply to your email within 24 hours.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
        FOOTER
   ══════════════════════════════════════════ -->
   <footer class="site-footer" id="contact">
@@ -1077,6 +1146,6 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/main.js?v=2"></script>
+  <script src="js/main.js?v=3"></script>
 </body>
 </html>

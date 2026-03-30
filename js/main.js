@@ -399,3 +399,32 @@ document.querySelectorAll('.how-card, .why-card, .review-card, .pcn-card, .portf
     card.style.willChange = 'auto';
   });
 });
+
+/* ═══════════════════════════════════════════
+   CONTACT FORM — Netlify AJAX submit
+═══════════════════════════════════════════ */
+const contactForm = document.getElementById('contactForm');
+const cfSuccess   = document.getElementById('cfSuccess');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', async e => {
+    e.preventDefault();
+    const btn = contactForm.querySelector('.cf-submit');
+    btn.disabled = true;
+    btn.innerHTML = 'Sending… <i class="bi bi-hourglass-split"></i>';
+
+    try {
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(contactForm)).toString()
+      });
+      contactForm.style.display = 'none';
+      cfSuccess.classList.add('visible');
+    } catch {
+      btn.disabled = false;
+      btn.innerHTML = 'Send Message <i class="bi bi-send-fill"></i>';
+      alert('Something went wrong. Please try again.');
+    }
+  });
+}

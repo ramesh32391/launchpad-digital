@@ -1181,6 +1181,46 @@ img { max-width: 100%; }
 ============================================= */
 .contact-section { background: var(--bg); }
 
+/* Contact info panel */
+.ci-panel {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+  border-radius: var(--radius-lg);
+  padding: 40px 36px;
+  color: #fff;
+  height: 100%;
+}
+.ci-title { font-family: 'Blinker', sans-serif; font-weight: 800; font-size: 1.55rem; margin-bottom: 10px; }
+.ci-sub   { font-family: 'Inter', sans-serif; font-size: 0.9rem; opacity: 0.85; margin-bottom: 32px; line-height: 1.6; }
+.ci-item  { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 24px; }
+.ci-icon  {
+  width: 42px; height: 42px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; flex-shrink: 0;
+}
+.ci-lbl {
+  font-family: 'Blinker', sans-serif;
+  font-size: 0.72rem; font-weight: 700;
+  opacity: 0.72; text-transform: uppercase;
+  letter-spacing: 0.8px; margin-bottom: 3px;
+}
+.ci-val {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.92rem; color: #fff;
+  text-decoration: none; font-weight: 500;
+  transition: opacity 0.2s ease;
+  display: inline-block;
+}
+a.ci-val:hover { opacity: 0.75; text-decoration: underline; }
+.ci-hours {
+  margin-top: 32px; padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem; opacity: 0.8;
+  display: flex; align-items: center; gap: 8px;
+}
+
 .contact-card {
   background: #fff;
   border: 1px solid var(--card-border);

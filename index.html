@@ -12,7 +12,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@300;400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
-  <link href="css/style.css?v=8" rel="stylesheet" />
+  <link href="css/style.css?v=9" rel="stylesheet" />
 </head>
 <body>
 
@@ -1023,8 +1023,42 @@
         <h2 class="section-title fade-up">Tell us about your project</h2>
         <p class="section-sub fade-up">Fill in the form and we'll get back to you within 24 hours.</p>
       </div>
-      <div class="row justify-content-center">
-        <div class="col-lg-7 col-md-10 fade-up">
+      <div class="row g-4 align-items-start">
+
+        <!-- Contact info panel -->
+        <div class="col-lg-5 fade-up">
+          <div class="ci-panel">
+            <h4 class="ci-title">Reach us directly</h4>
+            <p class="ci-sub">Prefer to get in touch right away? We're available by email or phone.</p>
+            <div class="ci-item">
+              <div class="ci-icon"><i class="bi bi-envelope-fill"></i></div>
+              <div>
+                <div class="ci-lbl">Email</div>
+                <a href="mailto:contact@webreachonline.com" class="ci-val">contact@webreachonline.com</a>
+              </div>
+            </div>
+            <div class="ci-item">
+              <div class="ci-icon"><i class="bi bi-telephone-fill"></i></div>
+              <div>
+                <div class="ci-lbl">Phone</div>
+                <a href="tel:+14698504346" class="ci-val">469-850-4346</a>
+              </div>
+            </div>
+            <div class="ci-item">
+              <div class="ci-icon"><i class="bi bi-geo-alt-fill"></i></div>
+              <div>
+                <div class="ci-lbl">Location</div>
+                <span class="ci-val">800 S FM 1417, Sherman, Texas, USA</span>
+              </div>
+            </div>
+            <div class="ci-hours">
+              <i class="bi bi-clock-fill"></i> Mon–Fri, 9am–6pm CST
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact form -->
+        <div class="col-lg-7 fade-up">
           <div class="contact-card">
 
             <form name="contact" method="POST" data-netlify="true" id="contactForm">

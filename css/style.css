@@ -1275,7 +1275,7 @@ img { max-width: 100%; }
 .footer-contact { display: flex; flex-direction: column; gap: 12px; }
 .fc-item { display: flex; align-items: flex-start; gap: 10px; font-size: 0.85rem; color: #64748b; font-family: 'Inter', sans-serif; }
 .fc-item i { color: var(--primary-light); font-size: 0.9rem; margin-top: 2px; flex-shrink: 0; }
-.fc-placeholder { color: #334155; font-style: italic; font-size: 0.82rem; }
+.fc-item span { color: #94a3b8; font-size: 0.85rem; }
 .footer-top { padding-bottom: 60px; }
 .footer-bottom {
   border-top: 1px solid #1e293b; padding: 22px 0;

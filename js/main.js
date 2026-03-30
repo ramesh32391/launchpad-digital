@@ -407,24 +407,25 @@ const contactForm = document.getElementById('contactForm');
 const cfSuccess   = document.getElementById('cfSuccess');
 
 if (contactForm) {
-  contactForm.addEventListener('submit', async e => {
+  contactForm.addEventListener('submit', e => {
     e.preventDefault();
     const btn = contactForm.querySelector('.cf-submit');
     btn.disabled = true;
     btn.innerHTML = 'Sending… <i class="bi bi-hourglass-split"></i>';
 
-    try {
-      await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(new FormData(contactForm)).toString()
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(new FormData(contactForm)).toString()
+    })
+      .then(() => {
+        contactForm.style.display = 'none';
+        cfSuccess.classList.add('visible');
+      })
+      .catch(() => {
+        btn.disabled = false;
+        btn.innerHTML = 'Send Message <i class="bi bi-send-fill"></i>';
+        alert('Something went wrong. Please try again.');
       });
-      contactForm.style.display = 'none';
-      cfSuccess.classList.add('visible');
-    } catch {
-      btn.disabled = false;
-      btn.innerHTML = 'Send Message <i class="bi bi-send-fill"></i>';
-      alert('Something went wrong. Please try again.');
-    }
   });
 }
